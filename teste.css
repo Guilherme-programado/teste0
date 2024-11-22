@@ -1,0 +1,262 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #001f33;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+/* From Uiverse.io by csemszepp */ 
+.container {
+    width: 500px;
+    height: 1000px;
+    --s: 200px; /* control the size */
+    --c1: #1d1d1d;
+    --c2: #4e4f51;
+    --c3: #3c3c3c;
+  
+    background: repeating-conic-gradient(
+          from 30deg,
+          #0000 0 120deg,
+          var(--c3) 0 180deg
+        )
+        calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+      repeating-conic-gradient(
+        from 30deg,
+        var(--c1) 0 60deg,
+        var(--c2) 0 120deg,
+        var(--c3) 0 180deg
+      );
+    background-size: var(--s) calc(var(--s) * 0.577);
+  }
+  
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+h2 {
+    margin: 1px;
+    font-style:italic ;
+}
+
+/* Logo */
+.logo img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+/* Centraliza os cards */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 30px;
+}
+
+/* Card de Texto */
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #c3e6ec;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    color: #262626;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards Coloridos */
+.cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite quebra em telas pequenas */
+    justify-content: center;
+}
+
+.cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 400ms;
+}
+
+.cards .red {
+    background-color: #f43f5e;
+    top: -20vh;
+}
+
+.cards .blue {
+    background-color: #3b82f6;
+    top: -20vh;
+}
+
+.cards .green {
+    background-color: #22c55e;
+    top: -20vh;
+}
+
+.cards .card:hover {
+    transform: scale(1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+    transform: scale(0.9);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column; /* Alinha os cards verticalmente */
+        gap: 20px; /* Ajusta o espaçamento entre eles */
+    }
+
+    .cards .card {
+        width: 80%; /* Aumenta a largura dos cards para preencher melhor a tela */
+    }
+}
+
+/* From Uiverse.io by SouravBandyopadhyay */ 
+.card-title1 {
+    color: #262626;
+    font-size: 1.5em;
+    line-height: normal;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+  }
+  
+  .small-desc1 {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #452c2c;
+  }
+  
+  .small-desc1 {
+    font-size: 1em;
+  }
+  
+  .go-corner1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, #6293c8, #384c6c);
+    border-radius: 0 4px 0 32px;
+    
+  }
+  
+  .go-arrow1 {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+  }
+  
+  .card1 {
+    display: block;
+    position: relative;
+    max-width: 550px;
+    max-height: 350px;
+    background-color: #f2f8f9;
+    border-radius: 10px;
+    padding: 2em 1.2em;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
+    font-family: Arial, Helvetica, sans-serif;
+    top: 5vh;
+  }
+  
+  .card1:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: linear-gradient(135deg, #364a60, #384c6c);
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.35s ease-out;
+  }
+  
+  .card1:hover:before {
+    transform: scale(50);
+  }
+  
+  .card1:hover .small-desc1 {
+    transition: all 0.5s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .card1:hover .card-title1 {
+    transition: all 0.5s ease-out;
+    color: #ffffff;
+  }
+  
